@@ -11,9 +11,9 @@
 <body>
     <h1>Cadastro de Clientes</h1>
     <form method="post" action="salvar.php">
-        Nome: <input name="nome" maxlength="50"> <br>
-        Email: <input name="email" type="email">
-        Telefone: <input type="tel" maxlength="13" name="telefone"> <br>
+        Nome: <input name="nome" maxlength="50" required> <br>
+        Email: <input name="email" type="email"> <br>
+        Telefone: <input type="tel" maxlength="15" name="telefone" required> <br>
         Cidade: <input name="cidade" maxlength="40"> <br>
         Estado: <select id="estado" name="estado">
             <option value="AC">Acre</option>
