@@ -51,7 +51,7 @@
 
 </html>
 
-<?php 
+<?php
 
 
 $arquivo = fopen("clientes.csv", "r");
@@ -60,11 +60,21 @@ $arquivo = fopen("clientes.csv", "r");
 
 //echo $conteudo;
 
-while (!feof($arquivo));{
+while (!feof($arquivo)) {
     $linha = fgets($arquivo);
 
-    echo $linha . "<br>";
+    $registro = explode(",", $linha);
+
+    if ($registro[0] != "") {
+        echo $registro[0] . " - ";
+        echo $registro[1] . " - ";
+        echo $registro[2] . " - ";
+        echo $registro[3] . " - ";
+        echo $registro[4] . "<br>";
+    }
 }
+
+
 fclose($arquivo);
 ?>
 
