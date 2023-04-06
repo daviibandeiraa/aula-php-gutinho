@@ -56,10 +56,15 @@
 
 $arquivo = fopen("clientes.csv", "r");
 
-$conteudo = fread($arquivo, filesize("clientes.csv"));
+//$conteudo = fread($arquivo, filesize("clientes.csv"));
 
-echo $conteudo;
+//echo $conteudo;
 
+while (!feof($arquivo));{
+    $linha = fgets($arquivo);
+
+    echo $linha . "<br>";
+}
 fclose($arquivo);
 ?>
 
